@@ -63,6 +63,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .gradient-text {
   font-size: 36px;
   font-weight: bold;

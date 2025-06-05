@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tớ yêu bạn ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="love-container">
+    <div class="heart">❤️</div>
+    <h2 id="loveText"></h2>
+  </div>
+
+  <script>
+    // Lấy tên từ localStorage
+    const name = localStorage.getItem("crushName") || "bạn";
+    document.getElementById("loveText").innerText = `Tớ yêu ${name} 💖`;
+  </script>
+</body>
+</html>

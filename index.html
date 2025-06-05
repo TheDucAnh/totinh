@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tỏ tình ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Nhập tên người ấy 💌</h1>
+    <input type="text" id="yourCrush" placeholder="Tên người ấy..." />
+    <button onclick="goToLovePage()">Gửi lời yêu</button>
+  </div>
+
+  <script>
+    function goToLovePage() {
+      const name = document.getElementById("yourCrush").value.trim();
+      if (!name) {
+        alert("Nhập tên đi chứ 😳");
+        return;
+      }
+      // Lưu tên vào localStorage
+      localStorage.setItem("crushName", name);
+      // Chuyển sang trang tỏ tình
+      window.location.href = "love.html";
+    }
+  </script>
+</body>
+</html>

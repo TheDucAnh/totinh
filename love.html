@@ -8,13 +8,18 @@
 <body>
   <div class="love-container">
     <div class="heart">❤️</div>
-    <h2 id="loveText"></h2>
+    <div class="love-messages">
+      <h2 class="gradient-text" id="line1"></h2>
+      <h2 class="gradient-text" id="line2"></h2>
+      <h2 class="gradient-text" id="line3"></h2>
+    </div>
   </div>
 
   <script>
-    // Lấy tên từ localStorage
     const name = localStorage.getItem("crushName") || "bạn";
-    document.getElementById("loveText").innerText = `Tớ yêu ${name} 💖`;
+    document.getElementById("line1").innerText = `Tớ yêu ${name} 💖`;
+    document.getElementById("line2").innerText = `Thật lòng đó 💕`;
+    document.getElementById("line3").innerText = `Làm người yêu tớ nhé? 😳`;
   </script>
 </body>
 </html>

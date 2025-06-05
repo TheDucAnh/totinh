@@ -63,3 +63,19 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.gradient-text {
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #ff4d4d, #ff66cc, #4d79ff, #00cc99);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+  margin: 10px 0;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

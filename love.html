@@ -15,29 +15,15 @@
     </div>
   </div>
 
-  <!-- Thêm audio phát âm thanh "I love you" -->
-  <audio id="love-audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="auto"></audio>
-  <!-- Bạn có thể thay src thành file âm thanh "I love you" của bạn -->
-
   <script>
     const name = localStorage.getItem("crushName") || "bạn";
     document.getElementById("line1").innerText = `Tớ yêu ${name} 💖`;
     document.getElementById("line2").innerText = `Thật lòng đó 💕`;
     document.getElementById("line3").innerText = `Làm người yêu tớ nhé? 😳`;
 
-    // Tự động phát âm thanh khi trang tải xong (có thể click nếu trình duyệt chặn autoplay)
-    window.onload = () => {
-      const audio = document.getElementById("love-audio");
-      audio.play().catch(() => {
-        // Nếu trình duyệt chặn autoplay, hiển thị nút play
-        const btn = document.createElement("button");
-        btn.innerText = "Bấm đây để nghe âm thanh";
-        btn.style.fontSize = "1.2em";
-        btn.style.marginTop = "20px";
-        btn.onclick = () => audio.play();
-        document.body.appendChild(btn);
-      });
-    };
+    // Tự động phát âm thanh "I love you"
+    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'); // Thay URL thành link âm thanh "I love you" bạn thích
+    audio.play();
   </script>
 </body>
 </html>

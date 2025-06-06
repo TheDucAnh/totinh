@@ -64,6 +64,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Gradient chữ chuyển động nhanh hơn và mượt hơn */
 .gradient-text {
   font-size: 36px;
   font-weight: bold;
@@ -71,12 +72,11 @@ body {
   background-size: 800% 800%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientMove 6s ease infinite;
+  animation: gradientMove 2s linear infinite; /* 2s và linear cho chuyển động mượt, nhanh */
   margin: 10px 0;
 }
 
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
 }

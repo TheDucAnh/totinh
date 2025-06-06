@@ -72,9 +72,15 @@ body {
   background-size: 800% 800%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientMove 2s linear infinite; /* 2s và linear cho chuyển động mượt, nhanh */
+  animation: gradientMove 0.3s linear infinite; /* giảm xuống còn 0.3s */
   margin: 10px 0;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
 
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
